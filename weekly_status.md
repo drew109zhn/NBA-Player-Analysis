@@ -16,7 +16,7 @@ What did each project team member do this week?
 
 Provide a rough estimate of the division of labor:
 
-- Drew Zhong: 70%
+- Drew Zhong: 80%
 - *[Name goes here]: 40%*
 - *[Name goes here]: 10% (I had three exams this week, I will contribute more next week!)*
 
