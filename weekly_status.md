@@ -12,13 +12,13 @@ Report for the week of 3/20/17 to 3/27/17.
 What did each project team member do this week?
 
 - Drew Zhong: This week, I wrote proposal and scraped sample data.
-- *[Name goes here]: This week, I ...*
+- Saw Lin: This week, I helped come up with questions we intend to tackle.
 
 Provide a rough estimate of the division of labor:
 
 - Drew Zhong: 80%
 - *[Name goes here]: 40%*
-- *[Name goes here]: 10% (I had three exams this week, I will contribute more next week!)*
+- *[Saw Lin]: 10% (I had three exams this week, I will contribute more next week!)*
 
 What are the team's goals for next week?
 
