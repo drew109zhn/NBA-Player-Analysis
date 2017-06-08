@@ -1,7 +1,4 @@
-# COSC 480 DS Project
+# NBA Player Analysis
+In our project, we analyze Professional Basketball League dataset with techniques learned from the Data Science course to study player performances and nationality discrimination issues in NBA. We use python to scrape datasets from ESPN basketball database and basketball-references.com which include player demographics, player game statistics and yearly salaries. Then we  We then clear our datasets in psql and finally conduct empirical experiments in Stata. 
 
-The project guidelines can be found on the [course website](https://github.com/colgate-cosc480ds/lecture).
-
-Please describe any VM setup required for your project here.
-
-This could include commands to download data from online sources.  (Ideally, you should *not* commit raw data to your repo but instead provide instructions on how to obtain it.)
+We do not find evidence of nationality discrimination of salary in the NBA but we find that a NBA player’s age and true shooting percentage have the largest effects on his salary, ceteris paribus
