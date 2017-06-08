@@ -78,20 +78,20 @@ CREATE TABLE team_foreign_percent (
 );
 
 
-COPY foreign_player FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/international_players.csv' 
+COPY foreign_player FROM './CSVresults/international_players.csv' 
 DELIMITER ',' CSV HEADER;
 
-COPY player_stats FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_per.csv'
+COPY player_stats FROM './CSVresults/player_per.csv'
 DELIMITER ',' CSV HEADER;
 
-COPY team_attendence FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/team_attendence.csv'
+COPY team_attendence FROM './CSVresults/team_attendence.csv'
 DELIMITER ',' CSV HEADER;
 
-COPY player_salary FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_salary.csv'
+COPY player_salary FROM './CSVresults/player_salary.csv'
 DELIMITER ',' CSV HEADER;
 
-COPY player_stats_full FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_stats_full.csv'
+COPY player_stats_full FROM './CSVresults/player_stats_full.csv'
 DELIMITER ',' CSV HEADER;
 
-COPY team_foreign_percent FROM '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/team_foreign_percent.csv'
+COPY team_foreign_percent FROM './CSVresults/team_foreign_percent.csv'
 DELIMITER ',' CSV HEADER;

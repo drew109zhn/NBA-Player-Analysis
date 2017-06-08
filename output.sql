@@ -22,17 +22,17 @@ UPDATE PLAYER_STATS_FULL as ps
 	where ps.player not in (select player from foreign_player);
 
 
-COPY (select ps.*,pa.team,pa.salary from player_stats as ps join player_salary as pa on ps.player = pa.player and ps.year = pa.year order by ps.year) TO '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_stats_and_salary.csv' DELIMITER ',' CSV HEADER;
+COPY (select ps.*,pa.team,pa.salary from player_stats as ps join player_salary as pa on ps.player = pa.player and ps.year = pa.year order by ps.year) TO './CSVresults/player_stats_and_salary.csv' DELIMITER ',' CSV HEADER;
 COPY (WITH temp as (select ps.*,pa.team,pa.salary from player_stats as ps join player_salary as pa on ps.player = pa.player and ps.year = pa.year order by ps.year)
-select temp.*,ta.homegames,ta.total_attendence,ta.avg_attendence from temp left join team_attendence as ta on ta.team = temp.team and ta.year = temp.year order by ta.year, ta.team) TO '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_everything.csv' DELIMITER ',' CSV HEADER;
+select temp.*,ta.homegames,ta.total_attendence,ta.avg_attendence from temp left join team_attendence as ta on ta.team = temp.team and ta.year = temp.year order by ta.year, ta.team) TO './CSVresults/player_everything.csv' DELIMITER ',' CSV HEADER;
 
-COPY (select psf.*,pa.team,pa.salary from player_stats_full as psf join player_salary as pa on psf.player = pa.player and psf.year = pa.year order by psf.year) TO '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_stats_and_salary_second.csv' DELIMITER ',' CSV HEADER;
+COPY (select psf.*,pa.team,pa.salary from player_stats_full as psf join player_salary as pa on psf.player = pa.player and psf.year = pa.year order by psf.year) TO './CSVresults/player_stats_and_salary_second.csv' DELIMITER ',' CSV HEADER;
 COPY (WITH temp as (select ps.*,pa.team,pa.salary from player_stats_full as ps join player_salary as pa on ps.player = pa.player and ps.year = pa.year order by ps.year)
-select temp.*,ta.homegames,ta.total_attendence,ta.avg_attendence from temp left join team_attendence as ta on ta.team = temp.team and ta.year = temp.year order by ta.year, ta.team) TO '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/player_everything_second.csv' DELIMITER ',' CSV HEADER;
+select temp.*,ta.homegames,ta.total_attendence,ta.avg_attendence from temp left join team_attendence as ta on ta.team = temp.team and ta.year = temp.year order by ta.year, ta.team) TO './CSVresults/player_everything_second.csv' DELIMITER ',' CSV HEADER;
 
 COPY (select tp.*,ta.homegames, ta.total_attendence, ta.avg_attendence from 
 team_foreign_percent as tp, team_attendence as ta
-where tp.year = ta.year and tp.team = ta.team) TO '/Users/dzhong/Desktop/2017 Spring/CS480/project-nextnbastar/team_foreign_percent_and_attendence.csv' DELIMITER ',' CSV HEADER;
+where tp.year = ta.year and tp.team = ta.team) TO './CSVresults/team_foreign_percent_and_attendence.csv' DELIMITER ',' CSV HEADER;
 -- COPY ((WITH team_foreign_players as (WITH temp as (select ps.*,pa.team,pa.salary from player_stats_full as ps join player_salary as pa on ps.player = pa.player and ps.year = pa.year order by ps.year)
 -- select temp2.team,temp2.year,count(*) as num from (select temp.*,ta.homegames,ta.total_attendence,ta.avg_attendence from temp left join team_attendence as ta on ta.team = temp.team and ta.year = temp.year 
 -- where temp.foreign_player = 1
